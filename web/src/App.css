@@ -48,7 +48,8 @@ h1, h2, p {
 }
 
 .card {
-  background-color: #333; /* Dark card background */
+  background-color: #333;
+
   color: white; /* White text inside cards */
 }
 
