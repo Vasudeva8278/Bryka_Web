@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+/* Set the background color to black and text color to white */
+.App {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+}
+
+h1, h2, p {
+  color: white;
+}
+
+.card {
+  background-color: #333; /* Dark card background */
+  color: white; /* White text inside cards */
+}
+
+.card img {
+  border-radius: 5px;
+}
+
+.navbar {
+  background-color: #444; /* Darker navbar */
+}
