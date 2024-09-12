@@ -1,62 +1,76 @@
+/* Global settings */
 .App {
-  text-align: center;
+  background-color: white; /* Change background to white */
+  color: black; /* Set text color to black for better contrast */
+  min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Header */
 .App-header {
-  background-color: #282c34;
+  background-color: #f8f9fa; /* Light gray for header background */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black; /* Set text color to black */
 }
 
+/* Links */
 .App-link {
-  color: #61dafb;
+  color: #007bff; /* A more prominent blue color for links */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-/* Set the background color to black and text color to white */
-.App {
-  background-color: black;
-  color: white;
-  min-height: 100vh;
-}
-
-h1, h2, p {
-  color: white;
-}
-
-.card {
-  background-color: #333;
-
-  color: white; /* White text inside cards */
-}
-
-.card img {
-  border-radius: 5px;
-}
-
+/* Navbar */
 .navbar {
-  background-color: #444; /* Darker navbar */
+  background-color: #ffffff; /* White background for the navbar */
+  border-bottom: 1px solid #ddd; /* Add a subtle border for clarity */
+  color: black; /* Text color for navbar */
+}
+
+/* Card */
+.card {
+  background-color: #f8f9fa; /* Light gray background for the cards */
+  color: black; /* Set text inside the card to black */
+  min-height: 400px; /* Equal sizing */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.card-img-top {
+  height: 200px; /* Set a fixed height for the images */
+  object-fit: cover; /* Make sure the image fits well inside the card */
+}
+
+/* Hover effect for the cards */
+.card:hover {
+  transform: scale(1.05); /* Slightly scale the card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Typography */
+h1, h2, p {
+  color: black; /* Set headings and paragraphs to black */
+}
+
+/* Footer and other sections */
+footer, section {
+  background-color: white; /* Ensure footer and other sections have a white background */
+  color: black; /* Set text color to black for contrast */
+}
+
+/* Buttons and other interactive elements */
+button, .btn {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white; /* White text for buttons */
+  border-radius: 4px;
+  padding: 8px 16px;
+  border: none;
+}
+
+button:hover, .btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }

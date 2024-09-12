@@ -1,101 +1,55 @@
-import React, { useState } from "react";
-
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaLocationArrow,
-  FaMobileAlt,
-} from "react-icons/fa";
-import Logo from '../../assets/images/home.png'; // Updated path
-import karthi from '../../assets/images/foot.png'; // Updated path
+import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="bg-gray-100 dark:bg-gray-950 text-white" style={{ backgroundImage: `url(${karthi})`,height: '100vh', backgroundSize: 'cover' }}>
-      <section className="max-w-[1200px] mx-auto">
-        <div className=" grid md:grid-cols-3 py-5">
-          <div className=" py-8 px-4 ">
-            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3">
-              <img src={Logo} alt="Logo" className="max-w-[50px]" />
-              FOOD CORNER
-            </h1>
-            <p className="">
-              
-Biryani is a beloved dish known for its rich flavors, aromatic spices, and the delightful combination of ingredients. Here are some points that capture the essence of biryani:{" "}
-            </p>
-            <br />
-            <div className="flex items-center gap-3">
-              <FaLocationArrow />
-              <p>Andhra Pradesh,Vizag</p>
-            </div>
-            <div className="flex items-center gap-3 mt-3">
-              <FaMobileAlt />
-              <p>+91 9640809042</p>
-            </div>
-            {/* Social Handle */}
-            <div className="flex items-center gap-3 mt-6">
-              <a href="#">
-                <FaInstagram className="text-3xl" />
-              </a>
-              <a href="#">
-                <FaFacebook className="text-3xl" />
-              </a>
-              <a href="#">
-                <FaLinkedin className="text-3xl" />
-              </a>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10 ">
-            <div className="">
-              <div className="py-8 px-4 ">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Important Links
-                </h1>
-                <ul className={`flex flex-col gap-3`}>
-                  <li className="cursor-pointer">Home</li>
-                  <li className="cursor-pointer">About</li>
-                  <li className="cursor-pointer">Services</li>
-                  <li className="cursor-pointer">Login</li>
-                </ul>
+    <footer className="bg-body-tertiary text-center">
+       {/* Contact Section */}
+    
+      {/* Grid container */}
+      <div className="container p-4">
+    
+        {/* Section: Images */}
+        <section className="">
+          <div className="row">
+            {[
+              'https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp',
+              'https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp',
+              'https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp',
+              'https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp',
+              'https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp',
+              'https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp',
+            ].map((imageSrc, index) => (
+              <div key={index} className="col-lg-2 col-md-12 mb-4 mb-md-0">
+                <div
+                  className="bg-image hover-overlay shadow-1-strong rounded"
+                  data-mdb-ripple-init
+                  data-ripple-color="light"
+                >
+                  <img src={imageSrc} className="w-100" alt={`City Image ${index + 1}`} />
+                  <a href="#!">
+                    <div
+                      className="mask"
+                      style={{ backgroundColor: 'rgba(251, 251, 251, 0.2)' }}
+                    ></div>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="">
-              <div className="py-8 px-4 ">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Links
-                </h1>
-                <ul className="flex flex-col gap-3">
-                  <li className="cursor-pointer">Home</li>
-                  <li className="cursor-pointer">About</li>
-                  <li className="cursor-pointer">Services</li>
-                  <li className="cursor-pointer">Login</li>
-                </ul>
-              </div>
-            </div>
-            <div className="">
-              <div className="py-8 px-4 ">
-                <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Links
-                </h1>
-                {/* <ul className="list-disc list-inside"> */}
-                <ul className="flex flex-col gap-3">
-                  <li className="cursor-pointer">Home</li>
-                  <li className="cursor-pointer">About</li>
-                  <li className="cursor-pointer">Services</li>
-                  <li className="cursor-pointer">Login</li>
-                </ul>
-              </div>
-            </div>
+            ))}
           </div>
-        </div>
-        <div>
-          <div className="text-center py-10 border-t-2 border-gray-300/50">
-            @copyright 2024 All rights 
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+        {/* Section: Images */}
+      </div>
+      {/* Grid container */}
+
+      {/* Copyright */}
+      <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+        Have Nice Day
+        <a className="text-body" href="https://mdbootstrap.com/">
+       
+        </a>
+      </div>
+      {/* Copyright */}
+    </footer>
   );
 };
 

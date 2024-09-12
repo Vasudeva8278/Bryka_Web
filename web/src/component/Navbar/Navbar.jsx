@@ -1,11 +1,31 @@
-import React from 'react';
+// Navbar.js
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import logo from '../../assets/images/logo.png'; // Import the logo image
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className={`navbar navbar-expand-lg ${scrolled ? 'navbar-scrolled' : 'navbar-light bg-light'}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">MyBookStore</a>
+        <a className="navbar-brand" href="#">
+          <img src={logo} alt="MyBookStore" style={{ height: '40px' }} />
+        </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
